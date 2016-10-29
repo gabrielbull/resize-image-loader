@@ -12,15 +12,21 @@ module.exports = [
       filename: 'app.js'
     },
     resolve: {
-      extensions: ['', '.js']
+      extensions: ['.js']
+    },
+    resolveLoader: {
+      alias: {
+        'resize-image': path.join(__dirname, '..', 'index.js')
+      }
     },
     module: {
       loaders: [
       {
         test: /.*\.(gif|png|jpg|svg)$/, 
         loaders: [
-          'file?hash=sha512&digest=hex&name=[hash].[ext]', 
-          '../index.js']},
+          'file?hash=sha512&digest=hex&name=[hash].[ext]',
+          'resize-image'
+        ]},
       ]
     }
   }
