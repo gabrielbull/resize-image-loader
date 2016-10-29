@@ -18,16 +18,17 @@
     "url": "git@github.com:LevelMoney/resize-image-loader.git"
   },
   "dependencies": {
-    "datauri": "^0.7.1",
+    "datauri": "^1.0.4",
     "debug": "^2.2.0",
-    "file-loader": "^0.8.4",
-    "loader-utils": "^0.2.6"
+    "file-loader": "^0.9.0",
+    "loader-utils": "^0.2.16"
   },
   "peerDependencies": {
     "gm": "*",
     "file-loader": "*"
   },
   "devDependencies": {
-    "webpack": "^1.7.3"
+    "gm": "^1.23.0",
+    "webpack": "^2.1.0-beta.25"
   }
 }
