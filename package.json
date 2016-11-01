@@ -5,7 +5,7 @@
   "author": "Puppybits @puppybits",
   "keywords": "webpack image resize responsive adaptive",
   "scripts": {
-    "test": "DEBUG=resize-image-loader webpack --config test/webpack.config.js"
+    "test": "mocha --opts test/mocha.opts test/tests"
   },
   "licenses": [
     {
@@ -15,20 +15,20 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@github.com:LevelMoney/resize-image-loader.git"
-  },
-  "dependencies": {
-    "datauri": "^1.0.4",
-    "debug": "^2.2.0",
-    "file-loader": "^0.9.0",
-    "loader-utils": "^0.2.16"
+    "url": "git@github.com:gabrielbull/resize-loader.git"
   },
   "peerDependencies": {
-    "gm": "*",
-    "file-loader": "*"
+    "gm": "*"
   },
   "devDependencies": {
+    "chai": "^3.5.0",
+    "file-loader": "^0.9.0",
     "gm": "^1.23.0",
+    "image-size": "^0.5.0",
+    "image-size-loader": "^0.7.0",
+    "image-webpack-loader": "^3.0.0",
+    "mocha": "^3.1.2",
+    "url-loader": "^0.5.7",
     "webpack": "^2.1.0-beta.25"
   }
 }
