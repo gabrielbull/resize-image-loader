@@ -1,0 +1,10 @@
+/node_modules
+/test
+/.idea
+/.codeclimate.yml
+/.editorconfig
+/.eslintrc
+/.npmignore
+/.travis.yml
+/CONTRIBUTING.md
+/npm-debug.log

@@ -91,15 +91,16 @@ render(){
 }
 ```
 
-*placeholder* options.  
-
-`placeholder=<image-width>` default _20_  
-`blur=<gaussian-blur-amount>` default _40_  
+### Place Holder  
 
 * To also compress images combine [resize-loader](https://github.com/Levelmoney/resize-loader) with the [image-webpack-loader](https://github.com/tcoopman/image-webpack-loader)
-```
-var responsive = require('image-webpack!resize-image?sizes[]=200w,sizes[]=900w!./myImage.jpg');
+```jsx
 var img = require('image-webpack!./myImage.jpg')
+var placeHolder = require('-!url!resize?100!./myImage.jpg');
+
+<div style={{ background-image: `url(${placeHolder})`, filter: 'blur(20px)' }}>
+  <img src={{ img }}/>
+</div>
 ```
 
 
