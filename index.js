@@ -10,7 +10,7 @@
 //  @format String ('jpg', 'gif', 'webp', 'png')
 //    require('resize-image?format=webp!./myImage.jpg');
 
-var debug = require('debug')('resize-image-loader');
+var debug = require('debug')('resize-loader');
 var gm = require('gm').subClass({ imageMagick: true });
 var Datauri = require('datauri');
 var fs = require('fs');
