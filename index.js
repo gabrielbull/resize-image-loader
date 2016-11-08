@@ -1,11 +1,17 @@
 var gm = require('gm').subClass({ imageMagick: true });
 var path = require('path');
+var PNG = require('pngjs').PNG;
 
 function resizeImage(content, size, ext, callback) {
   size = parseInt(size);
   gm(content)
     .resize(size)
-    .toBuffer(ext, callback);
+    .toBuffer(ext, function (err, buffer) {
+      if (ext === 'png') {
+        buffer = PNG.sync.write(PNG.sync.read(buffer));
+      }
+      callback(err, buffer);
+    });
 }
 
 function parseQuery(query) {
